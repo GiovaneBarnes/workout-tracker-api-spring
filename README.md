@@ -14,13 +14,16 @@ A simple RESTful API built with Spring Boot to manage and track workout sessions
 
 ### ✅ Prerequisites
 - Java 17 or higher
-- Maven (or use Maven Wrapper)
+- Maven
+- Docker (Optional)
 
 ---
 
-### 🛠 Running the App
-
-To run using Maven wrapper:
+### 🛠 Running the App using Docker
 
 ```bash
-./mvnw spring-boot:run
+docker buildx build -t workout-tracker-api .
+
+docker run -p 8080:8080  workout-tracker-api
+
+
